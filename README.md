@@ -41,10 +41,10 @@ Theres 4 important classes in the processing.
 
 * LuceneIndexProcessor: it create a single-document, single-field lucene index of all the keywords (See how are they analyzed below), and returns an ordered list in order of relevance (relevance is defined as the quotient `appeareances_of_term/sum_of_all_appearances`).  
 
-* MetaTagKeywordsAnalyzer:
+* MetaTagKeywordsAnalyzer: This is a (shortened) meta tag example (wikipedia used to respond like this): 
+`<meta name="keywords" content="Mobile phone,Protection policy,Citation needed,Articles with unsourced statements since September 2007,Articles with unsourced statements since October 2008,Articles with unsourced statements since May 2008,Category:Mobile phones" />` 
 
-This is a (shortened) meta tag example (wikipedia used to respond like this):
-		<meta name="keywords" content="Mobile phone,Protection policy,Citation needed,Articles with unsourced statements since September 2007,Articles with unsourced statements since October 2008,Articles with unsourced statements since May 2008,Category:Mobile phones" />
+
 
 In it, every keyword is separated by a comma, and they all are more of "keyphrases" instead of keywords.
 
