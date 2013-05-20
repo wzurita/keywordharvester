@@ -46,11 +46,11 @@ Theres 4 important classes in the processing.
 
 
 
-In it, every keyword is separated by a comma, and they all are more of "keyphrases" instead of keywords.
+	In it, every keyword is separated by a comma, and they all are more of "keyphrases" instead of keywords.
 
-So it seems better that the tokenization process just breaks on the commas, and not in the spaces like it normally does. This also solves (at least helps) with the problem of the compound words. It also eliminate the problem of the stop words, as now the most common words, irrelevant for this problem, are not counted as a word anymore, altering results.
+	So it seems better that the tokenization process just breaks on the commas, and not in the spaces like it normally does. This also solves (at least helps) with the problem of the compound words. It also eliminate the problem of the stop words, as now the most common words, irrelevant for this problem, are not counted as a word anymore, altering results.
 
-However, there are some new problems with this approach. Now, "Articles with unsourced statements since May 2008" is seen as a relevant keyword, and it will probably will look relevant with any keyword we use, as wikipedia is now so popular. The solution is to use the "stopwords" to make away with this kind of contamination. The analyzer looks that each keyword does not contain any of the stopwords before returning it as an acceptable token. This is why the only predetermined stopword in the options is "unsourced".  
+	However, there are some new problems with this approach. Now, "Articles with unsourced statements since May 2008" is seen as a relevant keyword, and it will probably will look relevant with any keyword we use, as wikipedia is now so popular. The solution is to use the "stopwords" to make away with this kind of contamination. The analyzer looks that each keyword does not contain any of the stopwords before returning it as an acceptable token. This is why the only predetermined stopword in the options is "unsourced".  
 
 Final comments
 --------------
